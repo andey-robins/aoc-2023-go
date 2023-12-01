@@ -19,3 +19,6 @@
 
 # Go workspace file
 go.work
+
+# hide input files from git
+inputs/
