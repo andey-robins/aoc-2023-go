@@ -5,6 +5,7 @@ import (
 	"os"
 
 	"github.com/andey-robins/aoc-2023-go/solutions/day01"
+	"github.com/andey-robins/aoc-2023-go/solutions/day02"
 )
 
 func Day1() {
@@ -29,7 +30,18 @@ func Day1() {
 }
 
 func Day2() {
-	// TODO: Implement Day2
+	testInput, err := os.ReadFile("./inputs/tests/02.txt")
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Printf("test part1: %v\n", day02.Part1(string(testInput)))
+
+	input, err := os.ReadFile("./inputs/02.txt")
+	if err != nil {
+		panic(err)
+	}
+	fmt.Printf("part1: %v\n", day02.Part1(string(input)))
 }
 
 func Day3() {
