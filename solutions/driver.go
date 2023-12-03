@@ -6,7 +6,14 @@ import (
 
 	"github.com/andey-robins/aoc-2023-go/solutions/day01"
 	"github.com/andey-robins/aoc-2023-go/solutions/day02"
+	"github.com/andey-robins/aoc-2023-go/solutions/day03"
 )
+
+func check(e error) {
+	if e != nil {
+		panic(e)
+	}
+}
 
 func Day1() {
 	testInput, err := os.ReadFile("./inputs/tests/01.txt")
@@ -36,16 +43,28 @@ func Day2() {
 	}
 
 	fmt.Printf("test part1: %v\n", day02.Part1(string(testInput)))
+	fmt.Printf("test part2: %v\n", day02.Part2(string(testInput)))
 
 	input, err := os.ReadFile("./inputs/02.txt")
 	if err != nil {
 		panic(err)
 	}
 	fmt.Printf("part1: %v\n", day02.Part1(string(input)))
+	fmt.Printf("part2: %v\n", day02.Part2(string(input)))
 }
 
 func Day3() {
-	// TODO: Implement Day3
+	testInput, err := os.ReadFile("./inputs/tests/03.txt")
+	check(err)
+
+	fmt.Printf("test part1: %v\n", day03.Part1(string(testInput)))
+	fmt.Printf("test part2: %v\n", day03.Part2(string(testInput)))
+
+	input, err := os.ReadFile("./inputs/03.txt")
+	check(err)
+
+	fmt.Printf("part1: %v\n", day03.Part1(string(input)))
+	fmt.Printf("part2: %v\n", day03.Part2(string(input)))
 }
 
 func Day4() {
