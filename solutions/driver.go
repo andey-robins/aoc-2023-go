@@ -7,6 +7,7 @@ import (
 	"github.com/andey-robins/aoc-2023-go/solutions/day01"
 	"github.com/andey-robins/aoc-2023-go/solutions/day02"
 	"github.com/andey-robins/aoc-2023-go/solutions/day03"
+	"github.com/andey-robins/aoc-2023-go/solutions/day04"
 )
 
 func check(e error) {
@@ -68,7 +69,17 @@ func Day3() {
 }
 
 func Day4() {
-	// TODO: Implement Day4
+	testInput, err := os.ReadFile("./inputs/tests/04.txt")
+	check(err)
+
+	fmt.Printf("test part1: %v\n", day04.Part1(string(testInput)))
+	fmt.Printf("test part2: %v\n", day04.Part2(string(testInput)))
+
+	input, err := os.ReadFile("./inputs/04.txt")
+	check(err)
+
+	fmt.Printf("part1: %v\n", day04.Part1(string(input)))
+	fmt.Printf("part2: %v\n", day04.Part2(string(input)))
 }
 
 func Day5() {
